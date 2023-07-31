@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasCo Kicks. Just Shoe It. CasCo Kicks PH</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="icon" href="img/CasCo2.png">
+</head>
+<body>
+    <nav class="navbar"></nav>
+
+    <div class="account">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/shoes2.gif" alt="" width="80%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button><br>
+                            <a href="#">Forgotten your password?</a>
+                        </form>
+                        <form id="regForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Confirm Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+        var loginForm = document.getElementById("loginForm");
+        var regForm = document.getElementById("regForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            regForm.style.transform = "translate(0px)";
+            loginForm.style.transform = "translate(0px)";
+            Indicator.style.transform = "translate(100px)";
+        }
+
+        function login(){
+            regForm.style.transform = "translate(300px)";
+            loginForm.style.transform = "translate(300px)";
+            Indicator.style.transform = "translate(0px)";
+        }
+        
+    </script>
+
+</body>
+</html>
